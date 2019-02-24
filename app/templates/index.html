@@ -2,9 +2,22 @@
 {% load static %}
 
 {% block head %}
-<link rel="stylesheet" type="text/css" href="{% static 'index.css' %}" />
+<link rel="stylesheet" type="text/css" href="{% static '/index.css' %}" />
 {% endblock head %}
 
 {% block content %}
-  <p>3941</p>
+<div class="container">
+  <div class="rocket-area">
+    <i class="fas fa-space-shuttle rocket"></i>
+    <i class="fas fa-fire-alt fire"></i>
+  </div>
+</div>
 {% endblock content %}
+
+{% block script %}
+  $(function(){
+    $(".rocket-area").click(function(){
+      $(this).animate({"bottom":"300px"},4000)
+    })
+  })
+{% endblock script %}

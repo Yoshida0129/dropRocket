@@ -4,9 +4,21 @@
 }
 
 body {
-  width: 50%;
+  width: 75%;
   margin: 0 auto;
 }
-header {
+header > h2 {
+  text-align: left;
   font-style: Robot;
+  color: #19865C;
+  font-size: 22px;
+  font-weight: 700;
+}
+header > p {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 400;
+}
+header {
+  border-bottom: 1px solid black;
 }

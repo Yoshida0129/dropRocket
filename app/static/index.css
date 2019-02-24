@@ -1,3 +1,24 @@
-p {
-  color: #F00;
+.container {
+  position: relative;
+}
+.rocket-area {
+  position: absolute;
+  cursor: pointer;
+  margin-top: 100px;
+  text-align: center;
+  height: 500px;
+  width: 100%;
+}
+
+.rocket {
+  font-size: 100px;
+  transform:rotate(-90deg);
+}
+
+.fire{
+  text-align: center;
+  padding-top:5px;
+  display: block;
+  color: red;
+  font-size: 20px;
 }
