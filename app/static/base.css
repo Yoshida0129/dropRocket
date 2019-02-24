@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 50%;
+  margin: 0 auto;
+}
+header {
+  font-style: Robot;
+}
