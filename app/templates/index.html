@@ -6,18 +6,44 @@
 {% endblock head %}
 
 {% block content %}
-<div class="container">
-  <div class="rocket-area">
-    <i class="fas fa-space-shuttle rocket"></i>
-    <i class="fas fa-fire-alt fire"></i>
+<article>
+  <div class="rocket-contents">
+    <div class="rocket-area">
+      <i class="fas fa-space-shuttle rocket"></i>
+      <i class="fas fa-fire-alt fire"></i>
+    </div>
+  </div>
+  <section class="title-msg">
+    <h2>The install successfully! Congratulation!</h2>
+    <p>You are seeing this page because <span class="green">DEBUG=True</span>is in<br>your setting file and you have not configured any<br>URLs.</p>
+  </section>
+</article>
+
+{% endblock content %}
+
+{% block footer %}
+<div class="footer">
+  <div>
+    <p class="footer-item green">Django documentation</p>
+    </div>
+  <div>
+    <p class="footer-item green">Tutorial:A Poling App</p>
+  </div>
+  <div>
+    <p class="footer-item green">Django community</p>
   </div>
 </div>
-{% endblock content %}
+{% endblock footer %}
 
 {% block script %}
   $(function(){
     $(".rocket-area").click(function(){
-      $(this).animate({"bottom":"300px"},4000)
-    })
-  })
+      $.when(
+        $(this).animate({"bottom":"300px"},1000)
+      ).done(function(){
+        $(this).css({"left": "100px", "top": "-300px", "transform": "rotate(180deg)"})
+        $(this).animate({"top":"300px"},1000)
+      });
+    });
+  });
 {% endblock script %}

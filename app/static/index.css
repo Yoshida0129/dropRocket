@@ -1,18 +1,36 @@
-.container {
-  position: relative;
+.green {
+  color:#19865C;
 }
+
+.rocket-contents {
+  position: relative;
+  height: 300px;
+}
+
 .rocket-area {
   position: absolute;
   cursor: pointer;
-  margin-top: 100px;
+  margin: 100px 25%;
   text-align: center;
-  height: 500px;
-  width: 100%;
+  width: 50%;
 }
 
 .rocket {
   font-size: 100px;
   transform:rotate(-90deg);
+}
+
+.title-msg {
+  height: 200px;
+  text-align: center;
+}
+
+.title-msg > h2 {
+  font-size: 20px;
+}
+
+.title-msg > p {
+  font-size: 14px;
 }
 
 .fire{
@@ -21,4 +39,21 @@
   display: block;
   color: red;
   font-size: 20px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  border-top: 1px solid black;
+  padding:5%;
+}
+
+.footer > div{
+  width: 30%;
+}
+
+.footer-item {
+  font-size: 14px;
+  text-align: center;
 }
